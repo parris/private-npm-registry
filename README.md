@@ -19,9 +19,9 @@ CouchDB Setup:
 
 Should work out of the box without any customization
 
-- `brew install couchdb`
-- `couchdb`
-- visit `http://127.0.0.1:5984/_utils/index.html` and create a `registry` database
+- Build via instructions from: https://github.com/iriscouch/build-couchdb
+- Setup couchdb using these instructions: https://github.com/npm/npmjs.org
+- No need to replicate so stop before those instructions
 
 Nginx Setup:
 ----
