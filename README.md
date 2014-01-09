@@ -64,6 +64,10 @@ Add a site config
          proxy_cache npm;
          proxy_cache_valid 200 302 3d;
          proxy_cache_valid 404 1m;
+         # it seemed to work for me without the next 3 lines
+         sub_filter 'registry.npmjs.org' 'localhost:12345';
+         sub_filter_once off;
+         sub_filter_types application/json;
        }
      }
 
