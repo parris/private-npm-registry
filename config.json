@@ -13,7 +13,7 @@
             {
             "vhost": "localhost",
             "paths": [
-                "http://localhost:5984/registry/_design/app/_rewrite",
+                "http://0.0.0.0:8080/",
                 "http://localhost:12345/"
             ]
         }]
