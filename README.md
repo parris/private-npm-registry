@@ -24,7 +24,7 @@ Reggie Setup (optional/way easier)
 - Details at: https://npmjs.org/package/reggie
 - `npm install -g reggie`
 - `reggie-server -d ~/.reggie`
-- If you are using reggie
+- Make sure to replace the first line in config.json's paths array with the reggie url
 
 CouchDB Setup (optional):
 ----
@@ -34,6 +34,8 @@ Should work out of the box without any customization
 - Build via instructions from: https://github.com/iriscouch/build-couchdb
 - Setup couchdb using these instructions: https://github.com/npm/npmjs.org
 - No need to replicate so stop before those instructions
+- Make sure to replace the first line in config.json's paths array with the couch db url (according to npm)
+- I found this pretty hard to set up. You may also want to peak at the docker project's setup
 
 Nginx Setup:
 ----
