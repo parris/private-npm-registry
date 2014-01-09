@@ -8,7 +8,7 @@ What we want:
 
 Solution:
 - Use Kappa to proxy
-- Hit the private couchdb instance
+- Hit the private reggie or couchdb instance
 - Proxy the default npm registry through nginx
 
 Other options: https://github.com/terinjokes/docker-npmjs
@@ -18,6 +18,14 @@ Quickstart:
 
 You need an NPM registry server. You can either use reggie or set one up yourself via couchdb.
 
+Reggie Setup (optional/way easier)
+----
+
+- Details at: https://npmjs.org/package/reggie
+- `npm install -g reggie`
+- `reggie-server -d ~/.reggie`
+- If you are using reggie
+
 CouchDB Setup (optional):
 ----
 
@@ -26,14 +34,6 @@ Should work out of the box without any customization
 - Build via instructions from: https://github.com/iriscouch/build-couchdb
 - Setup couchdb using these instructions: https://github.com/npm/npmjs.org
 - No need to replicate so stop before those instructions
-
-Reggie Setup (optional/way easier)
-----
-
-- Details at: https://npmjs.org/package/reggie
-- `npm install -g reggie`
-- `reggie-server -d ~/.reggie`
-- If you are using reggie
 
 Nginx Setup:
 ----
