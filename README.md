@@ -77,6 +77,7 @@ Include the files you just added to nginx.conf
         include sites-enabled/*.conf;
         # ...
 
+- Move your default nginx.conf port off of 8080 to something else
 - Restart nginx, `sudo nginx -s reload`, or just `sudo nginx`
 - Visit http://localhost:12345/npm to confirm the proxy works
 - Turn off wifi and visit that same URL!
