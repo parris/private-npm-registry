@@ -1,5 +1,5 @@
 Eventbrite's NPM Registry Solution
-----
+====
 
 What we want:
 - A private NPM registry
@@ -12,10 +12,10 @@ Solution:
 - Proxy the default npm registry through nginx
 
 Quickstart:
-----
+====
 
 CouchDB Setup:
---
+----
 
 Should work out of the box without any customization
 
@@ -31,17 +31,17 @@ This is what worked for me. Largely influenced by: http://eng.yammer.com/a-priva
 - `brew tap marcqualie/nginx && brew install nginx-full` (this gives you all needed modules)
 - sudo mkdir -p /var/cache/npm/data
 
-1. Create a cache zone
+Create a cache zone
 
-/usr/local/etc/nginx/conf.d/npm.conf
+    /usr/local/etc/nginx/conf.d/npm.conf
 
     # this is the npm zone, things stay active for 3 days
     proxy_cache_path /var/cache/npm/data levels=1:2 keys_zone=npm:20m max_size=1000m inactive=3d;
     proxy_temp_path /var/cache/npm/tmp;
 
-2. Add a site config
+Add a site config
 
-/usr/local/etc/nginx/sites-enabled/npm.conf
+    /usr/local/etc/nginx/sites-enabled/npm.conf
 
     server {
        listen 12345;
@@ -54,9 +54,9 @@ This is what worked for me. Largely influenced by: http://eng.yammer.com/a-priva
        }
      }
 
-3. Include the files you just added to nginx.conf
+Include the files you just added to nginx.conf
 
-/usr/local/etc/nginx/nginx.conf
+    /usr/local/etc/nginx/nginx.conf
 
     # ...
     http {
@@ -64,9 +64,9 @@ This is what worked for me. Largely influenced by: http://eng.yammer.com/a-priva
         include sites-enabled/*.conf;
         # ...
 
-4. Restart nginx, `sudo nginx -s reload`, or just `sudo nginx`
-5. Visit http://localhost:12345/npm to confirm the proxy works
-6. Turn off wifi and visit that same URL!
+- Restart nginx, `sudo nginx -s reload`, or just `sudo nginx`
+- Visit http://localhost:12345/npm to confirm the proxy works
+- Turn off wifi and visit that same URL!
 
 Kappa Setup
 ----
