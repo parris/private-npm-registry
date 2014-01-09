@@ -21,6 +21,7 @@ Should work out of the box without any customization
 
 - `brew install couchdb`
 - `couchdb`
+- visit `http://127.0.0.1:5984/_utils/index.html` and create a `registry` database
 
 Nginx Setup:
 ----
