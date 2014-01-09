@@ -1,0 +1,21 @@
+{
+    "servers": [
+        {
+            "host": "localhost",
+            "port": 1337
+        }
+    ],
+    "plugins": {
+        "kappa": [
+            {
+
+            },
+            {
+            "vhost": "localhost",
+            "paths": [
+                "http://127.0.0.1:5984/registry/_design/ghost/_rewrite/",
+                "http://localhost:12345"
+            ]
+        }]
+    }
+}
