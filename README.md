@@ -1,4 +1,4 @@
-Eventbrite's NPM Registry Solution
+Private NPM Registry + Proxy Caching
 ====
 
 What we want:
