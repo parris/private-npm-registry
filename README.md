@@ -72,7 +72,7 @@ Kappa Setup
 ----
 
 - Edit config.json. At the very least you should replace
-  `http://localhost:12345` with your registries host name
+  `http://localhost:12345` with your registry's host name
 - Run `npm start` in this repo
 
 NPM Setup on client machines
