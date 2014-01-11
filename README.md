@@ -104,3 +104,10 @@ NPM Setup on client machines
 This adds `registry = http://localhost:1337` to your .npmrc file in your home directory.
 
 After all that you should not only be able to `npm publish`, which actually only publishes to your private registry, but you should also be able to install packages from the normal npm registry. If the repo already exists in the nginx cache you won't even make a request npm headquarters.
+
+
+License Info
+----
+[![License](http://i.creativecommons.org/p/zero/1.0/80x15.png "License")](http://creativecommons.org/publicdomain/zero/1.0/)
+
+To the extent possible under law, Parris Khachi has waived all copyright and related or neighboring rights to Private NPM Registry + Proxy Caching. This work is published from: United States.
