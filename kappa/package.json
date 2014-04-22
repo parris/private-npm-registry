@@ -1,0 +1,14 @@
+{
+    "name": "eb-npm-registry",
+    "version": "0.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "kappa -c config.json"
+    },
+    "author": "",
+    "license": "MIT",
+    "dependencies": {
+        "kappa": "~0.14.3"
+    }
+}
